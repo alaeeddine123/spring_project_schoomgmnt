@@ -12,10 +12,10 @@ public class Student {
 	
 	/* Default Constructor */ 
 	
-/*	public Student() {
+	public Student() {
 	super();
 	System.out.println("First condt Student class ");
-	}*/
+	}
 	
  
 	/* constructor */
