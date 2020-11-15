@@ -20,7 +20,7 @@
 
 	</bean>   
    
- 	 	<!-- Bean for Student class  -->
+ 	 	<!-- Bean for Teacher class  -->
 	
 	<bean id = "Teacher" class = "com.Schoolpkg.Teacher">
 	
