@@ -24,6 +24,15 @@ public class testStudentClass {
 	Teacher1.display();
 	
 	
+	
+	/* TESTING THE TEACHER CLASS BEAN */
+	
+	School_Subject subject1 = (School_Subject) conx.getBean("Subject");
+	subject1.display();
+	
+	
+	
+	
 	/* CLOSING THE APPLICATION_CONTEXT FILE  */ 
 	
 	((ClassPathXmlApplicationContext) conx).close();	

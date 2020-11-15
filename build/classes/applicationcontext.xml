@@ -35,6 +35,19 @@
 	</bean>  
  
  
+ 	 	<!-- Bean for  School_Subject Class  -->
+	
+	<bean id = "Subject" class = "com.Schoolpkg.School_Subject">
+	
+	<!--<property name="Student_First_Name" 		value="test first name"></property> -->
+	<!--<property name="Student_Family_name" 		value="test family nam"></property> -->
+	<!--<property name="Student_Id"			 		value="id00001"></property> -->
+	
+	 <constructor-arg 	 value = "test name"></constructor-arg> 
+	 <constructor-arg 	 value = "test ID"></constructor-arg> 
+	
+
+	</bean>  
  
  
  
