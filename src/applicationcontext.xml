@@ -6,7 +6,7 @@
    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
 
-   	<!-- Bean for Student class  -->
+   	<!-- ********************** Beans for Student class ******************************* -->
 	
 	<bean id = "Student" class = "com.Schoolpkg.Student">
 	
@@ -16,9 +16,12 @@
 	
 	 <constructor-arg 	 value = "test first name"></constructor-arg> 
 	 <constructor-arg 	 value = "test family name"></constructor-arg> 
-	 <constructor-arg      value = "id00001" ></constructor-arg> 
-
-	</bean>   
+	 <constructor-arg    value = "id00001" ></constructor-arg> 	 
+		</bean>
+	
+	
+	  
+   <!-- ***************************************************************************************** -->
    
  	 	<!-- Bean for Teacher class  -->
 	
@@ -40,6 +43,10 @@
 	<bean id = "Subject" class = "com.Schoolpkg.School_Subject">
 	
 	<!--<property name="Student_First_Name" 		value="test first name"></property> -->
+ <!--<property name="Student_Family_name" 		value="test family nam"></property> -->
+	<!--<property name="Student_Family_name" 		value="test family nam"></property> -->
+	<!--<property name="Student_Family_name" 		value="test family nam"></property> -->
+	<!--<property name="Student_Family_name" 		value="test family nam"></property> -->
 	<!--<property name="Student_Family_name" 		value="test family nam"></property> -->
 	<!--<property name="Student_Id"			 		value="id00001"></property> -->
 	
@@ -48,8 +55,24 @@
 	
 
 	</bean>  
+	
+	
+	<bean id = "Classe" class = "com.Schoolpkg.Classe" > 
+	
+	<constructor-arg value = "test id classe"  >  </constructor-arg>
+	<constructor-arg value = "test classe Name">  </constructor-arg>
+	
+	
+	</bean>
  
  
+ 
+ 	
+	<bean id = "Student1" class = "com.Schoolpkg.Student" parent = "Student">
+	
+	<constructor-arg ref="Classe"></constructor-arg>
+	
+	</bean>
  
  
  
