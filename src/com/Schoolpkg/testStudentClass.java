@@ -11,8 +11,8 @@ public class testStudentClass {
 		
 	ApplicationContext conx = new ClassPathXmlApplicationContext("applicationcontext.xml");
 	
-	Student Student1 = (Student) conx.getBean("Student1");
-	Student1.display();
+	//Student Student1 = (Student) conx.getBean("Student1");
+	//Student1.display();
 	
 	/*Student Student2 = (Student) conx.getBean("Student1");
 	Stduent2.*/
@@ -23,8 +23,8 @@ public class testStudentClass {
 	
 	/* TESTING THE TEACHER CLASS BEAN */
 		
-	//Teacher Teacher1 = (Teacher) conx.getBean("Teacher");
-	//Teacher1.display();
+	Teacher Teacher1 = (Teacher) conx.getBean("Teacher");
+	Teacher1.display();
 	
 	
 	

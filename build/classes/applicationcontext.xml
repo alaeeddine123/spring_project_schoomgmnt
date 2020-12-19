@@ -2,8 +2,10 @@
 
 <beans xmlns = "http://www.springframework.org/schema/beans"
    xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
-   xsi:schemaLocation = "http://www.springframework.org/schema/beans
-   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+		   xsi:schemaLocation = "http://www.springframework.org/schema/beans 
+                     http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+                     http://www.springframework.org/schema/aop 
+                     http://www.springframework.org/schema/aop/spring-aop-3.1.xsd">
 
 
    	<!-- ********************** Beans for Student class ******************************* -->
@@ -19,8 +21,7 @@
 	 <constructor-arg    value = "id00001" ></constructor-arg> 	 
 		</bean>
 	
-	
-	  
+	 
    <!-- ***************************************************************************************** -->
    
  	 	<!-- Bean for Teacher class  -->
@@ -31,12 +32,23 @@
 	<!--<property name="Student_Family_name" 		value="test family nam"></property> -->
 	<!--<property name="Student_Id"			 		value="id00001"></property> -->
 	
-	 <constructor-arg 	 value = "test teacher first name"></constructor-arg> 
-	 <constructor-arg 	 value = "test teacher family name"></constructor-arg> 
-	 <constructor-arg    value = "teast teacher id00002" ></constructor-arg> 
+	 <constructor-arg 	name="Teacher_First_Name"    value = "test teacher first name">		</constructor-arg> 
+	 <constructor-arg 	name="Teacher_Family_Name"   value = "test teacher family name">	</constructor-arg> 
+	 <constructor-arg   name="Teacher_Id"			 value = "teast teacher id00002" >		</constructor-arg> 
+	 <constructor-arg 	 name = "Classe_Tab">
+	 
+	 <list>
+	 
+              <ref  bean = "Classe" /> 
+              <bean class = "com.Schoolpkg.Classe" >
+                    <property name="Classe_Id" value="classe id test heritage" />
+                    <property name="Classe_Name" value="classe name test heritage" />
+                </bean>
+	 </list> 
+	 </constructor-arg>
+	 </bean>  
+	
 
-	</bean>  
- 
  
  	 	<!-- Bean for  School_Subject Class  -->
 	
@@ -62,16 +74,12 @@
 	<constructor-arg value = "test id classe"  >  </constructor-arg>
 	<constructor-arg value = "test classe Name">  </constructor-arg>
 	
-	
 	</bean>
  
- 
- 
+
  	
 	<bean id = "Student1" class = "com.Schoolpkg.Student" parent = "Student">
-	
 	<constructor-arg ref="Classe"></constructor-arg>
-	
 	</bean>
  
  
